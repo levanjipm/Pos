@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "DefaultLayout";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Scripts {
+    <script type="text/javascript" src="~/Scripts/libs/runtime.js"></script>
+    <script type="text/javascript" src="~/Scripts/libs/polyfills.js"></script>
+    <script type="text/javascript" src="~/Scripts/libs/styles.js"></script>
+    <script type="text/javascript" src="~/Scripts/libs/vendor.js"></script>
+    <script type="text/javascript" src="~/Scripts/libs/main.js"></script>
+}
+<head>
+    <link href="~/Content/DefaultStyle.css" rel="stylesheet" type="text/css" />
+</head>
+<head>
+    <base href="#/" />
+</head>
+<body>
+    <app-root></app-root>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+
