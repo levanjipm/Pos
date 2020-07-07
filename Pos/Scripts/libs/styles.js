@@ -426,11 +426,9 @@ options.singleton = false;
 
 var update = api(content, options);
 
-var exported = content.locals ? content.locals : {};
 
 
-
-module.exports = exported;
+module.exports = content.locals || {};
 
 /***/ }),
 
@@ -441,7 +439,7 @@ module.exports = exported;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Daniel Rudianto\source\repos\Pos\Pos\src\styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! C:\Levanji's Data\Project\Pos\Pos\src\styles.css */"./src/styles.css");
 
 
 /***/ })
