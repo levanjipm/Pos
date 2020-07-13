@@ -1,31 +1,27 @@
-import * as tslib_1 from "tslib";
+import { __decorate, __metadata } from "tslib";
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 let ItemComponent = class ItemComponent {
-    constructor() {
-        this.items = this.requestItems();
+    constructor(http) {
+        this.http = http;
     }
-    requestItems() {
-        var xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = function () {
-            if (xhr.status == 200) {
-                return xhr.response;
-            }
-        };
-        xhr.open('GET', 'https://localhost:44394/item/GetAll', false);
-        xhr.send();
+    getItems() {
+        this.http.get(window.location.origin + "/Item/GetAll").subscribe(items => {
+            this.itemsArray = items;
+            console.log(items);
+        });
     }
     ngOnInit() {
-    }
-    ngAfterContentInit() {
+        this.getItems();
     }
 };
-ItemComponent = tslib_1.__decorate([
+ItemComponent = __decorate([
     Component({
         selector: 'app-item',
         templateUrl: './item.component.html',
         styleUrls: ['./item.component.css']
     }),
-    tslib_1.__metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [HttpClient])
 ], ItemComponent);
 export { ItemComponent };
 //# sourceMappingURL=item.component.js.map

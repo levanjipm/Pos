@@ -16,17 +16,27 @@ namespace Pos.Controllers
             return View();
         }
         
-        public JsonResult GetAll()
+        public JsonResult GetAll(int? skip = null, int? take)
         {
-            ItemModel model = new ItemModel
-            {
-                Id = 1,
-                Name = "haha"
-            };
-            JsonResult jsonResult = new JsonResult();
-            jsonResult.JsonRequestBehavior = JsonRequestBehavior.AllowGet;
-            jsonResult.Data = model;
-            return jsonResult;
+            PosEntities db = new PosEntities();
+            List<ItemModel> items = new List<ItemModel>();
+            //if (skip == null)
+            //{
+            //    items = ItemModel.GetAll(db.Items.ToList());
+            //} else
+            //{
+            //    items = ItemModel.GetAll(db.Items.ToList()).Take(take).Skip(skip);
+            //}
+            //items = db.Items.Select(dbObject => new ItemModel(dbObject)).ToList();
+            
+
+            return Json(items, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult Create(ItemModel model)
+        {
+
+            return RedirectToAction("Index");
         }
     }
 }

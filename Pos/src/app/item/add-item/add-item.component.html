@@ -1,0 +1,9 @@
+<form [formGroup]="RegisterItemForm" (ngSubmit)="onSubmit()">
+    <label>Reference</label>
+    <input type="text" class="form-control" formControlName="reference" placeholder="Reference" />
+
+    <label>Name</label>
+    <input type="text" class="form-control" formControlName="name" placeholder="Name" />
+
+    <button class="btn btn-default" type="submit">Submit</button>
+</form>

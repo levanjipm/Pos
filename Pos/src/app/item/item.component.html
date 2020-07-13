@@ -1,4 +1,14 @@
-<p>item works!</p>
-<div>
-    <p  *ngFor="let item of items">{{ item.Name }}</p>
-</div>
+<a class="btn btn-success" routerLink="/item/addItem">Add button</a>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Reference</th>
+        <th>Name</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let items of itemsArray">
+        <td>{{ items.Reference }}</td>
+        <td>{{ items.Name }}</td>
+        <td><button class="btn btn-default">Edit</button></td>
+    </tr>
+</table>
