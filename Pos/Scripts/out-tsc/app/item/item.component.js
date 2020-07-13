@@ -1,4 +1,4 @@
-import { __decorate, __metadata } from "tslib";
+import * as tslib_1 from "tslib";
 import { Component } from '@angular/core';
 let ItemComponent = class ItemComponent {
     constructor() {
@@ -19,13 +19,13 @@ let ItemComponent = class ItemComponent {
     ngAfterContentInit() {
     }
 };
-ItemComponent = __decorate([
+ItemComponent = tslib_1.__decorate([
     Component({
         selector: 'app-item',
         templateUrl: './item.component.html',
         styleUrls: ['./item.component.css']
     }),
-    __metadata("design:paramtypes", [])
+    tslib_1.__metadata("design:paramtypes", [])
 ], ItemComponent);
 export { ItemComponent };
 //# sourceMappingURL=item.component.js.map

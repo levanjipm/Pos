@@ -1,4 +1,4 @@
-import { __decorate } from "tslib";
+import * as tslib_1 from "tslib";
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './AppRouting.module';
@@ -7,7 +7,7 @@ import { ItemComponent } from './item/item.component';
 import { ItemCategoryComponent } from './item-category/item-category.component';
 let AppModule = class AppModule {
 };
-AppModule = __decorate([
+AppModule = tslib_1.__decorate([
     NgModule({
         declarations: [
             AppComponent,

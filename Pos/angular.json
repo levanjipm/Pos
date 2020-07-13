@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "PosApp"
+    }
+  },
+  "defaultProject": "PosApp",
+  "cli": {
+    "analytics": false
+  }
 }

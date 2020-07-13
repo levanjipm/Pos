@@ -1,4 +1,4 @@
-import { __decorate } from "tslib";
+import * as tslib_1 from "tslib";
 import { RouterModule } from '@angular/router';
 import { ItemComponent } from './item/item.component';
 import { NgModule } from '@angular/core';
@@ -7,7 +7,7 @@ const appRoutes = [
 ];
 let AppRoutingModule = class AppRoutingModule {
 };
-AppRoutingModule = __decorate([
+AppRoutingModule = tslib_1.__decorate([
     NgModule({
         imports: [
             RouterModule.forRoot(appRoutes)
